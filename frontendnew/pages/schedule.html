@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+ 
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+     <!-- FullCalendar Core CSS -->
+
+    <link href="../dist/css/fullcalendar.min.css" rel="stylesheet">
+    <link href="../dist/css/fullcalendar_002.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    
+     <link href="../dist/css/button.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <style type="text/css">
+    iframe{width: 100%;border: 0;height: calc(100vh)}
+   
+    
+    #AddEventpopUpDiv {
+			position:absolute;
+		    left:0;
+		    right:0;
+		    margin-left:auto;
+		    margin-right:auto;
+			background: #C0C0C0;
+			padding: 20px;
+			border-radius: 5px;
+			width: 350px;
+			z-index:9002 ;
+	}
+	
+.label {
+	width: 30% px;
+	text-align: right;
+	padding: 5px
+}
+
+.content {
+	text-align: left;
+	padding: 5px;
+	padding-left: 8px
+}
+.box {
+
+    opacity: 0.3;
+    background-color:black;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    vertical-align:middle;
+   	z-index: 8000;
+}
+.myfont {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	}
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand" href="index.html"><h4 style="color:grey; border-style: solid; border-width: 2px;">Think Together</h4></a>
+
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav nav-pills">
+                    <li role="presentation" >
+                        <a href="index.html"> Home</a>
+                    </li>
+                    <li role="presentation" class="active">
+                        <a href="#">Schedule</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="documents.html">Documents</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="hr.html">HR</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="emergencies.html">Emergencies</a>
+                    </li>	
+                    <li role="presentation" class="navbar-link navbar-right">
+                        <a href="login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+
+					<div class="col-lg-7">
+						<h3 class="page-header">Schedule</h3>
+						<div>
+    						  
+						</div>
+						<div id="AddEventpopUpDiv" style="display: none">
+							<table border="0" class="myfont">
+								<tr>
+									<td colspan="2" align="right"><a href="javascript:closePopUp()"><font style="color:red">[X]</font></a></td>
+									
+								</tr>
+								<tr>
+									<td colspan="2" style="align:right"><span style="font-size: 36px">Add Event</span><br><hr></td>
+								</tr>
+								
+								<tr>
+									<td >Event Name</td>
+									<td class="content"><input type="text" id="eventName"
+										style="width: 210px; height:25px; font-size: 12pt"></td>
+								</tr>
+								<tr>
+									<td >Start Date</td>
+									<td class="content"><input type="date" id="startDate"  placeholder="mm-dd-yyyy"
+										style="width: 210px; height: 25px; font-size: 12pt"></td>
+								</tr>
+								<tr>
+									<td >End Date</td>
+									<td class="content"><input type="date" id="EndDate" placeholder="mm-dd-yyyy"
+										style="width: 210px; height: 25px; font-size: 12pt"></td>
+								</tr>
+								
+								<tr>
+									<td colspan="2" align="center"><span ><a href="#"
+							class="submitButton">Add Event</a></span></td>
+								</tr>
+								
+							</table>
+						</div>
+						<div style="align:center;width:100%" id="calendar"></div>
+<br><br>
+						<div align="center" id="addEventDiv"><span><a href="javascript:toggleAddEventPopUp();"
+							class="submitButton">Add Event</a></span>
+					</div>
+
+				</div>
+				<div class="col-lg-4">
+								<div style="height:600px"><br><br><br><br><u><iframe src="../dist/files/2014_2015_Schedule_Tuition.pdf" style="border: none;width:120%;height:800px;"></iframe></u></div>
+				</div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->                       
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <div id="blockscreen" class="box" style="display: none"></div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../dist/js/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+    
+    <script src="../dist/js/moment.js"></script>
+    <script src="../dist/js/fullcalendar.min.js"></script>
+    
+
+    <script type="text/javascript">
+    function getURLParameter(name) {
+  	  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+ 	}
+   
+  
+    $(document).ready(function() {
+       
+        $('#calendar').fullCalendar({
+        	height:650,
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: '2015-10-12',
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2015-10-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2015-10-07',
+                    end: '2015-10-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2015-10-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2015-10-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2015-10-11',
+                    end: '2015-10-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2015-10-12T10:30:00',
+                    end: '2015-10-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2015-10-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2015-10-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2015-10-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2015-10-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2015-10-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2015-10-28'
+                }
+            ]
+        });
+        
+    });
+    
+    function toggleAddEventPopUp() {
+		var el = document.getElementById("popUpDiv");
+		$("#blockscreen").show();
+		$("#AddEventpopUpDiv").show("slow");
+		
+	}
+    function closePopUp()
+    {
+    	$("#AddEventpopUpDiv").hide("slow");
+    	$("#blockscreen").hide();
+    	
+    }
+    
+</script>
+
+</body>
+
+</html>
+	

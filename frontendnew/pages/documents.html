@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../dist/css/button.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+    document.getElementById('form_upload').onclick = function() {
+        document.getElementById('my_file').click();
+    };
+    
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand" href="index.html"><h4 style="color:grey; border-style: solid; border-width: 2px;">Think Together</h4></a>
+
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav nav-pills">
+                    <li role="presentation" >
+                        <a href="index.html"> Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="schedule.html">Schedule</a>
+                    </li>
+                    <li role="presentation" class="active" >
+                        <a href="#">Documents</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="hr.html">HR</a>
+                       </li>
+                    <li role="presentation" >
+                        <a href="emergencies.html">Emergencies</a>
+                    </li>
+                    <li role="presentation" class="navbar-link navbar-right">
+                        <a href="login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+
+                        
+                        <section id="subSection">
+                        
+                        <div id="forms" style="width='20%'; font-size: large;">
+                            
+                            <h3 class="page-header">Forms</h3>
+                            <br>
+                            
+                            
+                            <div style="padding-left: 10%;">
+                            <h4><b>Request Form</b></h4>
+                            <form class="form-horizontal">
+							  <div class="form-group">
+							    <label for="name" class="col-sm-2 control-label">Name</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="name" placeholder="Full Name">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="id" class="col-sm-2 control-label">Id</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="id" placeholder="User Id">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="date" class="col-sm-2 control-label">Date</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="date" placeholder="mm/dd/yyyy">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="Request-Type" class="col-sm-2 control-label">Request Type</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="reqType" placeholder="Request Type">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="Assigned-To" class="col-sm-2 control-label">Assigned To</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="assignTo" placeholder="Person Assigned">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="desc" class="col-sm-2 control-label">Description</label>
+							    <div class="col-sm-8">
+							      <textarea class="form-control" rows="4" placeholder="Provide Brief Description"></textarea>
+							    </div>
+                                  
+							  </div>
+                                <br>
+                                	<div align="center" id="addEventDiv"><span><a href="javascript:toggleAddEventPopUp();"
+							class="submitButton">Submit</a></span>&nbsp;<span><button type="reset"
+							class="cancelButton">Clear</button></span>
+                                       
+					</div>
+							  <br>
+							  <div align="center">
+							<b>Use the Below links to download appropriate forms to log other request.</b><br>
+								<a>Parents' Rights</a><br>
+								<a>Personal Rights</a><br>
+								<a>Physician Report</a><br>
+								<a>Immunization Records</a><br>
+								<a>Summer Enrollment Contact</a><br><br>
+								Submit by uploading the form :
+								
+								<input type="file"  id="my_file">
+								
+							  </div>
+							</form>
+                            </div>
+                            
+                            
+							
+                        </div>
+                        
+                        </section>
+                        
+                        
+                                               
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="navbar-default side-nav" role="navigation">
+                            <ul class="nav">
+                              <li role="presentation"><a onclick="validate(this);" class="active" id="formsSec">Forms</a></li>
+                              <li role="presentation"><a onclick="validate(this);" id="progInfoSec">Program Info</a></li>
+                              <li role="presentation"><a onclick="validate(this);" id="currSec">Curriculam</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->                       
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+    
+    <script type="text/javascript">
+    
+    function validate(val)
+    {
+    	var forms = '<div id="forms" style="font-size: large;">'
+            
+            +'<h3 class="page-header">Form</h3>'
+            +'<br>'
+            
+            
+            +'<div style="padding-left: 10%;">'
+            +'<h4><b>Request Form</b></h4>'
+            +'<form class="form-horizontal">'
+            +'			  <div class="form-group">'
+            +'<label for="name" class="col-sm-2 control-label">Name</label>'
+            +'<div class="col-sm-8">'
+            +'<input type="text" class="form-control" id="name" placeholder="Full Name">'
+            +'</div>'
+            +'			  </div>'
+            +'			  <div class="form-group">'
+            +'<label for="id" class="col-sm-2 control-label">Id</label>'
+            +'<div class="col-sm-8">'
+            +'<input type="text" class="form-control" id="id" placeholder="User Id">'
+            +'</div>'
+            +'			  </div>'
+            +'			  <div class="form-group">'
+            +'<label for="date" class="col-sm-2 control-label">Date</label>'
+            +'<div class="col-sm-8">'
+            +'<input type="text" class="form-control" id="date" placeholder="mm/dd/yyyy">'
+            +'</div>'
+            +'			  </div>'
+            +'			  <div class="form-group">'
+            +'<label for="Request-Type" class="col-sm-2 control-label">Request Type</label>'
+            +'<div class="col-sm-8">'
+            +'<input type="text" class="form-control" id="reqType" placeholder="Request Type">'
+            +'</div>'
+            +'			  </div>'
+            +'			  <div class="form-group">'
+            +'<label for="Assigned-To" class="col-sm-2 control-label">Assigned To</label>'
+            +'<div class="col-sm-8">'
+            +'<input type="text" class="form-control" id="assignTo" placeholder="Person Assigned">'
+            +'</div>'
+            +'			  </div>'
+            +'			  <div class="form-group">'
+            +'<label for="desc" class="col-sm-2 control-label">Description</label>'
+            +'<div class="col-sm-8">'
+            +'<textarea class="form-control" rows="4" placeholder="Provide Brief Description"></textarea>'
+            +'</div>'
+            +'			  </div>'
+            +'			  <br>'
+            +'			  <div align="center">'
+            +'<b>Use the Below links to download appropriate forms to log other request.</b><br>'
+            +'				<a>Parents Rights</a><br>'
+            +'				<a>Personal Rights</a><br>'
+            +'				<a>Physician Report</a><br>'
+            +'				<a>Immunization Records</a><br>'
+            +'				<a>Summer Enrollment Contact</a><br><br>'
+            +'				Submit by uploading the form :'
+            +''				
+            +'				<input type="file"  id="my_file">'
+            +''				
+            +'			  </div>'
+            +'</form>'
+            +'</div>'
+            
+            
+			
+            +'</div>';
+        
+        
+    	var programInfo = '<div id="programInfo" style="font-size: medium;">'
+            +'<h3 class="page-header">Program Info</h3>'
+            +'<b>PRE-ALGEBRA: </b>The first math course in high school and will guide you through among other things integers, one-step equations, inequalities and equations, graphs and functions, percent, probabilities.'
+			+'<br><br>'
+			+'<b>ALGEBRA 1: </b>The second math course in high school and will guide you through among other things linear equations, , functions, exponential and logarithmic expressions, sequences and polynomial expressions.'
+			+'<br><br>'
++''			
++'			<b>ALGEBRA 2: </b>The third math course in high school and will guide you through among other things linear equations, inequalities, graphs, matrices, polynomials and radical expressions, quadratic equations, functions, exponential and logarithmic expressions, sequences and series, probability and trigonometry.'
+			+'<br><br>'
+			+'<b>JAVA PROGAM: </b>Basic Java Programming explaining the functions, methods, variables, syntax, class, object and other basic java program examples' 
+			+'<br><br>'
+            
+        '</div>';
+        
+    	var Curriculum = '<div id="Curriculum">'
+    		+'<h3 class="page-header">Curriculum</h3>'
+            
+    		+'<div style="padding-left: 5%; font-size: medium;">' 
+             
+    		+'Cover, Table of Contents, Message from the Superintendent, Acknowledgements, and Introduction'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/covertocsspimessage.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/covertocsspimessage.pdf" download>Download</a>'
+    		+''				
+    		+'				<br><br>'
+    		+'				Complete Kindergarten Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glckindercurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glckindercurriculum.pdf" download>Download</a>'
+    		+''				
+    		+'				<br><br>'
+    		+'				Complete First-Grade Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glcfirstgradecurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glcfirstgradecurriculum.pdf" download>Download</a>'
+    		+''				
+				
+    		+'				<br><br>'
+    		+'				Complete Second-Grade Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc2ndgradecurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc2ndgradecurriculum.pdf" download>Download</a>'
+				
+    		+'<br><br>'
+    		+'				Complete Third-Grade Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc3rdgradecurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc3rdgradecurriculum.pdf" download>Download</a>'
+
+    		+'				<br><br>'
+    		+'				Complete Fourth-Grade Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc3rdgradecurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc3rdgradecurriculum.pdf" download>Download</a>'
+				
+    		+'				<br><br>'
+    		+'				Complete Fifth-Grade Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc5thgradecurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc5thgradecurriculum.pdf" download>Download</a>'
+    		+''				
+    		+'				<br><br>'
+    		+'				Complete Sixth-Grade Curriculum'
+    		+'				<a class="btn btn-default" target="_blank" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc6thgradecurriculum.pdf">Open</a>'
+    		+'				&nbsp;<a class="btn btn-default" href="http://www.cde.ca.gov/ci/cr/cf/documents/glc6thgradecurriculum.pdf" download>Download</a>'
+    		+''				
+    		+'</div>'
+    		+''
+    		+'</div>';
+    		
+
+    		
+    		console.log(val.id);
+    		if(val.id ==="formsSec")
+    		{
+    			document.getElementById("subSection").innerHTML=forms;
+    		
+    		}
+    		if(val.id ==="progInfoSec")
+    		{
+    		document.getElementById("subSection").innerHTML=programInfo;
+    		}
+    		         
+    		if(val.id ==="currSec")
+    		{
+    		document.getElementById("subSection").innerHTML=Curriculum;
+    		}
+
+    	}
+    
+    </script>
+
+</body>
+
+</html>
